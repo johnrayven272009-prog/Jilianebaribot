@@ -4,15 +4,23 @@ function unlock() {
     const mainContent = document.getElementById("main-content");
 
     if (code === "0606") {
-        passwordScreen.classList.add("hidden");
-        mainContent.classList.remove("hidden");
+        passwordScreen.classList.add("unlocking");
 
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+        setTimeout(function() {
+            passwordScreen.classList.add("hidden");
+            mainContent.classList.remove("hidden");
+
+            window.scrollTo(0, 0);
+        }, 900);
+
     } else {
-        alert("Hmm... that's not it 👀");
+        const box = document.querySelector(".password-box");
+
+        box.classList.add("wrong-code");
+
+        setTimeout(function() {
+            box.classList.remove("wrong-code");
+        }, 500);
     }
 }
 
