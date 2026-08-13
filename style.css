@@ -126,7 +126,7 @@ input {
 
 .photo {
     position: relative;
-    width: 150px;
+    width: 120px;
     animation: swing 4s ease-in-out infinite;
     transform-origin: top center;
 }
@@ -169,7 +169,7 @@ input {
 }
 
 .polaroid {
-    width: 150px;
+    width: 120px;
     background: white;
     padding: 8px 8px 18px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.12);
@@ -177,10 +177,11 @@ input {
 }
 
 .polaroid img {
-    width: 134px;
-    height: 145px;
+    width: 104px;
+    height: 115px;
     object-fit: cover;
     display: block;
+}
 }
 
 .polaroid p {
