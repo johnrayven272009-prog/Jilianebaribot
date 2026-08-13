@@ -118,15 +118,16 @@ input {
 
 .photo-line {
     margin-top: 80px;
-    display: grid;
-    grid-template-columns: repeat(2, 150px);
+    display: flex;
     justify-content: center;
-    gap: 55px 45px;
+    align-items: flex-start;
+    gap: 35px;
+    flex-wrap: wrap;
 }
 
 .photo {
     position: relative;
-    width: 120px;
+    width: 150px;
     animation: swing 4s ease-in-out infinite;
     transform-origin: top center;
 }
@@ -137,18 +138,6 @@ input {
 
 .photo-three {
     animation-delay: -3s;
-}
-
-.photo-four {
-    animation-delay: -2s;
-}
-
-.photo-five {
-    animation-delay: -4s;
-}
-
-.photo-six {
-    animation-delay: -5s;
 }
 
 .string {
@@ -169,7 +158,6 @@ input {
 }
 
 .polaroid {
-    width: 120px;
     background: white;
     padding: 8px 8px 18px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.12);
@@ -177,11 +165,10 @@ input {
 }
 
 .polaroid img {
-    width: 104px;
-    height: 115px;
+    width: 134px;
+    height: 145px;
     object-fit: cover;
     display: block;
-}
 }
 
 .polaroid p {
@@ -189,6 +176,8 @@ input {
     font-size: 13px;
     font-style: italic;
 }
+
+/* SWING */
 
 @keyframes swing {
     0% {
@@ -257,19 +246,42 @@ input {
     font-size: 35px;
 }
 
-@media (max-width: 500px) {
-    .photo-line {
-        grid-template-columns: repeat(2, 140px);
-        gap: 45px 20px;
+/* UNLOCK ANIMATION */
+
+#password-screen.unlocking {
+    animation: unlockFade 0.9s ease forwards;
+}
+
+@keyframes unlockFade {
+    0% {
+        opacity: 1;
+        transform: scale(1);
     }
 
-    .photo,
-    .polaroid {
-        width: 140px;
+    100% {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+}
+
+.wrong-code {
+    animation: shake 0.45s ease;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
     }
 
-    .polaroid img {
-        width: 124px;
-        height: 135px;
+    25% {
+        transform: translateX(-8px);
+    }
+
+    50% {
+        transform: translateX(8px);
+    }
+
+    75% {
+        transform: translateX(-5px);
     }
 }
