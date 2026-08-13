@@ -118,11 +118,10 @@ input {
 
 .photo-line {
     margin-top: 80px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
     justify-content: center;
-    align-items: flex-start;
-    gap: 35px;
-    flex-wrap: wrap;
+    gap: 55px 45px;
 }
 
 .photo {
@@ -138,6 +137,18 @@ input {
 
 .photo-three {
     animation-delay: -3s;
+}
+
+.photo-four {
+    animation-delay: -2s;
+}
+
+.photo-five {
+    animation-delay: -4s;
+}
+
+.photo-six {
+    animation-delay: -5s;
 }
 
 .string {
@@ -158,6 +169,7 @@ input {
 }
 
 .polaroid {
+    width: 150px;
     background: white;
     padding: 8px 8px 18px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.12);
@@ -165,7 +177,7 @@ input {
 }
 
 .polaroid img {
-    width: 100%;
+    width: 134px;
     height: 145px;
     object-fit: cover;
     display: block;
@@ -242,4 +254,21 @@ input {
 
 .ending span {
     font-size: 35px;
+}
+
+@media (max-width: 500px) {
+    .photo-line {
+        grid-template-columns: repeat(2, 140px);
+        gap: 45px 20px;
+    }
+
+    .photo,
+    .polaroid {
+        width: 140px;
+    }
+
+    .polaroid img {
+        width: 124px;
+        height: 135px;
+    }
 }
