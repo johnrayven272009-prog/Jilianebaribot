@@ -350,3 +350,46 @@ body::before {
         transform: translateY(0);
     }
 }
+
+.ending {
+    position: relative;
+    overflow: hidden;
+}
+
+.ending h2 {
+    opacity: 0;
+    animation: endingReveal 2s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.ending span {
+    opacity: 0;
+    animation: heartReveal 2s ease forwards;
+    animation-delay: 1.4s;
+}
+
+@keyframes endingReveal {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+        letter-spacing: 2px;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 8px;
+    }
+}
+
+@keyframes heartReveal {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
