@@ -123,9 +123,6 @@ input {
     align-items: flex-start;
     gap: 35px;
     flex-wrap: wrap;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .photo {
@@ -136,13 +133,12 @@ input {
 }
 
 .photo-two {
-    animation-delay: -1s;
-    margin-top: 25px;
+    animation-delay: -1.5s;
 }
 
 .photo-three {
-    animation-delay: -2s;
-    margin-top: -10px;
+    animation-delay: -3s;
+}
 
 .string {
     width: 2px;
@@ -179,7 +175,6 @@ input {
     margin: 13px 3px 0;
     font-size: 13px;
     font-style: italic;
-}
 }
 
 @keyframes swing {
