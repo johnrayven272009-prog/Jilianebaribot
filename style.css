@@ -177,8 +177,6 @@ input {
     font-style: italic;
 }
 
-/* SWING */
-
 @keyframes swing {
     0% {
         transform: rotate(3deg);
@@ -217,87 +215,7 @@ input {
     opacity: 0.75;
 }
 
-.heart {
-    font-size: 40px;
-    margin: 25px;
-}
-
-.signature {
-    font-style: italic;
-}
-
-/* END */
-
-.ending {
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.ending h2 {
-    font-size: 32px;
-    font-weight: normal;
-}
-
-.ending span {
-    font-size: 35px;
-}
-
-/* UNLOCK ANIMATION */
-
-#password-screen.unlocking {
-    animation: unlockFade 0.9s ease forwards;
-}
-
-@keyframes unlockFade {
-    0% {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    100% {
-        opacity: 0;
-        transform: scale(1.05);
-    }
-}
-
-.wrong-code {
-    animation: shake 0.45s ease;
-}
-
-@keyframes shake {
-    0%, 100% {
-        transform: translateX(0);
-    }
-
-    25% {
-        transform: translateX(-8px);
-    }
-
-    50% {
-        transform: translateX(8px);
-    }
-
-    75% {
-        transform: translateX(-5px);
-    }
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.25;
-    background-image:
-        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.8) 1px, transparent 1px),
-        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.7) 1px, transparent 1px);
-    background-size: 120px 120px, 170px 170px;
-    z-index: -1;
-}
+/* MESSAGE REVEAL */
 
 .message p,
 .message h2,
@@ -351,18 +269,27 @@ body::before {
     }
 }
 
+/* END */
+
 .ending {
-    position: relative;
-    overflow: hidden;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .ending h2 {
+    font-size: 32px;
+    font-weight: normal;
     opacity: 0;
     animation: endingReveal 2s ease forwards;
     animation-delay: 0.5s;
 }
 
 .ending span {
+    font-size: 35px;
     opacity: 0;
     animation: heartReveal 2s ease forwards;
     animation-delay: 1.4s;
@@ -391,5 +318,84 @@ body::before {
     to {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+/* UNLOCK ANIMATION */
+
+#password-screen.unlocking {
+    animation: unlockFade 0.9s ease forwards;
+}
+
+@keyframes unlockFade {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+}
+
+.wrong-code {
+    animation: shake 0.45s ease;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-8px);
+    }
+
+    50% {
+        transform: translateX(8px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .intro h1 {
+        font-size: 40px;
+    }
+
+    .memories {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .photo-line {
+        gap: 35px 20px;
+    }
+
+    .photo {
+        width: 150px;
+    }
+
+    .message {
+        padding: 70px 25px;
+    }
+
+    .message h2 {
+        font-size: 30px;
+    }
+
+    .message p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .ending h2 {
+        font-size: 28px;
     }
 }
