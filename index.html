@@ -1,224 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Jil ♡</title>
-<style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0; color:#f7f1e8; background:#11131b;
-  font-family:Georgia,"Times New Roman",serif; overflow-x:hidden;
-}
-body:before{
-  content:""; position:fixed; inset:0; z-index:-2;
-  background:radial-gradient(circle at 50% 20%,#252b3d 0,#141722 45%,#0b0d12 100%);
-}
-body:after{
-  content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
-  opacity:.16; background-image:radial-gradient(#fff 0.6px,transparent .6px);
-  background-size:18px 18px;
-}
-.screen{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:28px}
-.hidden{display:none!important}
-
-.lock{
-  width:min(420px,100%); text-align:center; animation:fade .9s ease;
-}
-.small{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;opacity:.62}
-h1{font-size:2.2rem;font-weight:400;margin:14px 0 28px}
-.dots{display:flex;justify-content:center;gap:14px;margin:0 0 28px}
-.dot{width:12px;height:12px;border:1px solid #e9dfd0;border-radius:50%;transition:.2s}
-.dot.on{background:#e9dfd0}
-.keypad{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;max-width:280px;margin:auto}
-.key{
-  border:1px solid #ffffff25;background:#ffffff08;color:#fff;
-  border-radius:16px;padding:17px;font-size:1.15rem;cursor:pointer;
-  transition:.18s;
-}
-.key:hover{background:#ffffff15;transform:translateY(-2px)}
-.hint{margin-top:22px;font-size:.8rem;opacity:.45}
-
-#main{padding-bottom:100px}
-.intro{min-height:92svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 25px}
-.intro-inner{max-width:620px}
-.search{font-size:1.05rem;letter-spacing:.05em;min-height:30px}
-.cursor{display:inline-block;width:7px;height:18px;background:#eee;margin-left:4px;vertical-align:-3px;animation:blink 1s infinite}
-.song-title{margin-top:20px;font-size:1.9rem;opacity:0;transform:translateY(10px);transition:1s}
-.song-title.show{opacity:1;transform:none}
-.scroll-note{margin-top:45px;opacity:.45;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase}
-
-.gallery{padding:20px 18px 120px;max-width:900px;margin:auto}
-.gallery-title{text-align:center;margin:0 0 70px;font-size:1.4rem;font-weight:400}
-.line{height:2px;background:#ddd2c3;width:92%;margin:auto;opacity:.5}
-.photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:85px 28px;margin-top:0}
-.hang{position:relative;padding-top:0;display:flex;justify-content:center;animation:swing 4.7s ease-in-out infinite}
-.hang:nth-child(2){animation-duration:5.8s;animation-delay:-1.4s}
-.hang:nth-child(3){animation-duration:4.3s;animation-delay:-2.2s}
-.hang:nth-child(4){animation-duration:6.1s;animation-delay:-.8s}
-.hang:nth-child(5){animation-duration:5.1s;animation-delay:-2.8s}
-.hang:nth-child(6){animation-duration:4.6s;animation-delay:-1.7s}
-.string{position:absolute;top:-1px;left:50%;width:1px;height:35px;background:#ddd2c3;opacity:.65}
-.clip{position:absolute;top:29px;left:calc(50% - 6px);width:12px;height:12px;border:1px solid #ddd2c3;background:#b9aa97;border-radius:2px;z-index:2}
-.polaroid{
-  width:min(100%,270px);background:#f2eadf;padding:10px 10px 42px;
-  box-shadow:0 12px 28px #0008;transform:rotate(-1deg);
-}
-.hang:nth-child(even) .polaroid{transform:rotate(1.5deg)}
-.polaroid img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
-.caption{color:#29251f;text-align:center;margin-top:14px;font-size:1.15rem;letter-spacing:.12em}
-
-.final{min-height:80svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:50px 28px}
-.final-box{max-width:600px}
-.final-box h2{font-size:2rem;font-weight:400}
-.final-box p{font-size:1.08rem;line-height:1.9;color:#e4ddd3}
-
-.music{
-  position:fixed;left:12px;right:12px;bottom:12px;z-index:20;
-  background:#171a24ee;border:1px solid #ffffff20;backdrop-filter:blur(12px);
-  border-radius:18px;padding:12px 14px;box-shadow:0 8px 30px #0008;
-}
-.music-top{display:flex;align-items:center;gap:10px}
-.music-icon{font-size:1.25rem}
-.track{flex:1}
-.track strong{display:block;font-size:.92rem;font-weight:400}
-.track span{display:block;font-size:.7rem;opacity:.55;margin-top:2px}
-.play{
-  border:1px solid #ffffff35;background:#fff;color:#111;border-radius:50%;
-  width:38px;height:38px;cursor:pointer;font-size:1rem
-}
-.bar{height:3px;background:#ffffff20;border-radius:3px;margin-top:10px;overflow:hidden}
-.progress{height:100%;width:0;background:#eee;transition:width .2s linear}
-
-@keyframes swing{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
-@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-@keyframes blink{50%{opacity:0}}
-@media(max-width:600px){
-  h1{font-size:1.8rem}
-  .photos{grid-template-columns:1fr;gap:80px}
-  .polaroid{width:min(78vw,290px)}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Jil ♡</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<section id="lock" class="screen">
-  <div class="lock">
-    <div class="small">a little something</div>
-    <h1>Enter the code</h1>
-    <div class="dots" id="dots">
-      <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
-    </div>
-    <div class="keypad">
-      <button class="key" data-n="1">1</button><button class="key" data-n="2">2</button><button class="key" data-n="3">3</button>
-      <button class="key" data-n="4">4</button><button class="key" data-n="5">5</button><button class="key" data-n="6">6</button>
-      <button class="key" data-n="7">7</button><button class="key" data-n="8">8</button><button class="key" data-n="9">9</button>
-      <span></span><button class="key" data-n="0">0</button><button class="key" id="clear">⌫</button>
-    </div>
-    <div class="hint">a date worth remembering</div>
-  </div>
-</section>
+    <!-- PASSWORD SCREEN -->
+    <section id="password-screen">
+        <div class="password-box">
+            <p>✦ A little something for you ✦</p>
 
-<main id="main" class="hidden">
-  <section class="intro">
-    <div class="intro-inner">
-      <div class="small">unlocked ♡</div>
-      <div class="search" id="search">finding the right song for this<span class="cursor"></span></div>
-      <div class="song-title" id="songTitle">I think I found it.</div>
-      <div class="scroll-note">scroll slowly ↓</div>
-    </div>
-  </section>
+            <h1>Enter the secret code</h1>
 
-  <section class="gallery">
-    <h2 class="gallery-title">little moments</h2>
-    <div class="line"></div>
-    <div class="photos">
-      <div class="hang"><div class="string"></div><div class="clip"></div><div class="polaroid"><img src="photo1.jpg"><div class="caption">P</div></div></div>
-      <div class="hang"><div class="string"></div><div class="clip"></div><div class="polaroid"><img src="photo2.jpg"><div class="caption">O</div></div></div>
-      <div class="hang"><div class="string"></div><div class="clip"></div><div class="polaroid"><img src="photo3.jpg"><div class="caption">G</div></div></div>
-      <div class="hang"><div class="string"></div><div class="clip"></div><div class="polaroid"><img src="photo4.jpg"><div class="caption">I</div></div></div>
-      <div class="hang"><div class="string"></div><div class="clip"></div><div class="polaroid"><img src="photo5.jpg"><div class="caption">K</div></div></div>
-      <div class="hang"><div class="string"></div><div class="clip"></div><div class="polaroid"><img src="photo6.jpg"><div class="caption">O</div></div></div>
-    </div>
-  </section>
+            <p>It's a date worth remembering.</p>
 
-  <section class="final">
-    <div class="final-box">
-      <div class="small">one last thing</div>
-      <h2>For Jil ♡</h2>
-      <p>
-        I’ll put your message here when you're ready.
-      </p>
-    </div>
-  </section>
-</main>
+            <input
+                id="code"
+                class="code-input"
+                type="password"
+                inputmode="numeric"
+                maxlength="4"
+                placeholder="••••"
+            >
 
-<div id="music" class="music hidden">
-  <div class="music-top">
-    <div class="music-icon">🎵</div>
-    <div class="track">
-      <strong>Glue Song</strong>
-      <span>beabadoobee</span>
-    </div>
-    <button class="play" id="play">▶</button>
-  </div>
-  <div class="bar"><div class="progress" id="progress"></div></div>
-</div>
+            <br>
 
-<!-- Add an audio source you are allowed to use here if you have one.
-     Example: <audio id="audio" src="your-audio-file.mp3"></audio> -->
-<audio id="audio" preload="metadata"></audio>
+            <button class="unlock-btn" onclick="unlock()">
+                Unlock ♡
+            </button>
+        </div>
+    </section>
 
-<script>
-const code="0606";
-let entered="";
-const dots=[...document.querySelectorAll(".dot")];
-const lock=document.getElementById("lock");
-const main=document.getElementById("main");
-const music=document.getElementById("music");
-const search=document.getElementById("search");
-const title=document.getElementById("songTitle");
-const audio=document.getElementById("audio");
-const play=document.getElementById("play");
-const progress=document.getElementById("progress");
 
-function updateDots(){
-  dots.forEach((d,i)=>d.classList.toggle("on",i<entered.length));
-}
-function unlock(){
-  lock.classList.add("hidden");
-  main.classList.remove("hidden");
-  music.classList.remove("hidden");
-  setTimeout(()=>title.classList.add("show"),2200);
-}
-document.querySelectorAll(".key[data-n]").forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    if(entered.length>=4)return;
-    entered+=btn.dataset.n; updateDots();
-    if(entered.length===4){
-      if(entered===code) unlock();
-      else{
-        setTimeout(()=>{entered="";updateDots()},350);
-      }
-    }
-  });
-});
-document.getElementById("clear").onclick=()=>{
-  entered=entered.slice(0,-1);updateDots();
-};
-play.onclick=()=>{
-  if(!audio.src){
-    alert("Add a permitted audio source to the <audio> element first.");
-    return;
-  }
-  if(audio.paused){audio.play();play.textContent="Ⅱ"}
-  else{audio.pause();play.textContent="▶"}
-};
-audio.addEventListener("timeupdate",()=>{
-  if(audio.duration) progress.style.width=(audio.currentTime/audio.duration*100)+"%";
-});
-audio.addEventListener("ended",()=>play.textContent="▶");
-</script>
+    <!-- MAIN WEBSITE -->
+    <main id="main-content" class="hidden">
+
+        <!-- INTRO -->
+        <section class="intro">
+            <p>you found it ♡</p>
+            <h1>Hi, Jil.</h1>
+            <p>I made a little something for you.</p>
+
+            <button class="music-btn" onclick="playMusic()">
+                🎵 Play the song
+            </button>
+
+            <audio id="song" loop>
+                <!-- We'll add the music properly later -->
+            </audio>
+        </section>
+
+
+        <!-- POLAROID SECTION -->
+        <section class="memories">
+
+            <h2>little moments</h2>
+            <p class="subtitle">some things I wanted to keep</p>
+
+            <div class="photo-line">
+
+                <div class="photo">
+                    <div class="string"></div>
+                    <div class="clip"></div>
+
+                    <div class="polaroid">
+                        <div class="photo-placeholder">
+                            📷
+                        </div>
+                        <p>one of my favorites</p>
+                    </div>
+                </div>
+
+
+                <div class="photo photo-two">
+                    <div class="string"></div>
+                    <div class="clip"></div>
+
+                    <div class="polaroid">
+                        <div class="photo-placeholder">
+                            📷
+                        </div>
+                        <p>a pretty moment</p>
+                    </div>
+                </div>
+
+
+                <div class="photo photo-three">
+                    <div class="string"></div>
+                    <div class="clip"></div>
+
+                    <div class="polaroid">
+                        <div class="photo-placeholder">
+                            📷
+                        </div>
+                        <p>glad I met you</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MESSAGE -->
+        <section class="message">
+
+            <p>there's something I've been wanting to say...</p>
+
+            <h2>I'm really glad I got to know you.</h2>
+
+            <p>
+                Every time I learn something new about you,
+                it somehow makes knowing you even more special.
+            </p>
+
+            <div class="heart">♡</div>
+
+            <p class="signature">
+                — Raven
+            </p>
+
+        </section>
+
+
+        <!-- END -->
+        <section class="ending">
+
+            <p>06.06</p>
+
+            <h2>That's all for now.</h2>
+
+            <span>♡</span>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
 </body>
 </html>
