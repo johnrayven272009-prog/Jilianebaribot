@@ -285,3 +285,16 @@ input {
         transform: translateX(-5px);
     }
 }
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.25;
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.8) 1px, transparent 1px),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.7) 1px, transparent 1px);
+    background-size: 120px 120px, 170px 170px;
+    z-index: -1;
+}
