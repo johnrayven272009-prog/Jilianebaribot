@@ -123,6 +123,9 @@ input {
     align-items: flex-start;
     gap: 35px;
     flex-wrap: wrap;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .photo {
@@ -133,12 +136,13 @@ input {
 }
 
 .photo-two {
-    animation-delay: -1.5s;
+    animation-delay: -1s;
+    margin-top: 25px;
 }
 
 .photo-three {
-    animation-delay: -3s;
-}
+    animation-delay: -2s;
+    margin-top: -10px;
 
 .string {
     width: 2px;
