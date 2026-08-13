@@ -162,10 +162,16 @@ input {
 }
 
 .polaroid {
-    background: white;
-    padding: 8px 8px 18px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    background: #fff;
+    padding: 10px 10px 22px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     margin-top: -2px;
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+}
+
+.polaroid:hover {
+    transform: scale(1.04);
 }
 
 .polaroid img {
@@ -174,12 +180,12 @@ input {
     object-fit: cover;
     display: block;
 }
-}
 
 .polaroid p {
-    margin: 13px 3px 0;
+    margin: 14px 3px 0;
     font-size: 13px;
     font-style: italic;
+    letter-spacing: 0.3px;
 }
 
 @keyframes swing {
