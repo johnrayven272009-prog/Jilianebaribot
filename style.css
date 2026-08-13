@@ -298,3 +298,55 @@ body::before {
     background-size: 120px 120px, 170px 170px;
     z-index: -1;
 }
+
+.message p,
+.message h2,
+.message .heart,
+.message .signature {
+    opacity: 0;
+    animation: messageReveal 1s ease forwards;
+}
+
+.message h2 {
+    animation-delay: 0.2s;
+}
+
+.message p:nth-of-type(1) {
+    animation-delay: 0.5s;
+}
+
+.message p:nth-of-type(2) {
+    animation-delay: 0.9s;
+}
+
+.message p:nth-of-type(3) {
+    animation-delay: 1.3s;
+}
+
+.message p:nth-of-type(4) {
+    animation-delay: 1.7s;
+}
+
+.message p:nth-of-type(5) {
+    animation-delay: 2.1s;
+}
+
+.message .heart {
+    animation-delay: 2.5s;
+}
+
+.message .signature {
+    animation-delay: 2.8s;
+}
+
+@keyframes messageReveal {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
