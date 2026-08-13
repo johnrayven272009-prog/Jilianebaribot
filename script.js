@@ -17,11 +17,8 @@ function unlock() {
 }
 
 function playMusic() {
-    const song = document.getElementById("song");
-
-    if (song.src) {
-        song.play();
-    } else {
-        alert("We'll add your song here next 🎵");
-    }
+    window.open(
+        "https://open.spotify.com/search/Glue%20Song%20beabadoobee",
+        "_blank"
+    );
 }
